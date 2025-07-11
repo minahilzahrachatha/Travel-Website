@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    
+body, h1, ul, li, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  background-color: #fff;
+  padding: 15px;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav ul li a.active {
+  color: #007BFF;
+}
+
+
+.destination-hero {
+  position: relative;
+  background-image: url("destination\ hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.destination-hero .overlay {
+  background-color: rgba(0, 0, 0, 0.3); 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.destination-hero h1 {
+  color: #fff;
+  font-size: 4rem;
+  z-index: 1;
+}
+.gilgit-baltistan {
+  background-color: #f4fafa; 
+  padding: 4rem 2rem;
+  text-align: left;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.gilgit-baltistan h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.gilgit-baltistan .subtitle {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+.places {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.place-card {
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.place-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.place-card p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+}
+.footer {
+  background-color: lightgrey;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #222;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+}
+
+.footer-column {
+  flex: 1 1 180px;
+  margin: 10px;
+  min-width: 180px;
+}
+
+.footer-column h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #222;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.footer-locale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.footer-locale img {
+  width: 20px;
+  height: 14px;
+}
+
+.footer-locale span {
+  font-weight: bold;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html" class="active">Destinations</a></li>
+       <li> <a href="tours.html" >Tours</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+       
+      </ul>
+    </nav>
+  </header>
+
+  <section class="destination-hero">
+    <div class="overlay">
+      <h1>Destinations</h1>
+    </div>
+  </section>
+  <section class="gilgit-baltistan">
+    <h2>Gilgit Baltistan</h2>
+    <p class="subtitle">Explore the beauty of the northern areas of Pakistan</p>
+  
+    <div class="places">
+      <div class="place-card">
+        <img src="india.jpg" alt="Hunza">
+        <p>Hunza</p>
+      </div>
+      <div class="place-card">
+        <img src="usa.jpeg" alt="Skardu">
+        <p>Skardu</p>
+      </div>
+      <div class="place-card">
+        <img src="latin america.jpg" alt="Ghizer">
+        <p>Ghizer</p>
+      </div>
+      <div class="place-card">
+        <img src="europe.jpg" alt="Astore">
+        <p>Astore</p>
+      </div>
+      <div class="place-card">
+        <img src="asia.jpg" alt="Nagar">
+        <p>Nagar</p>
+      </div>
+      <div class="place-card">
+        <img src="destination hero.jpg" alt="Gupis">
+        <p>Gupis</p>
+      </div>
+      <div class="place-card">
+        <img src="Veitnam.jpg" alt="Chilas">
+        <p>Chilas</p>
+      </div>
+      <div class="place-card">
+        <img src="asia.jpg" alt="Raikot">
+        <p>Raikot</p>
+      </div>
+      
+    </div>
+  </section>
+  
+  <section class="gilgit-baltistan">
+    <h2>Khyber Pakhtunkhwa</h2>
+    <p class="subtitle">Explore the beauty of the northern areas of Pakistan</p>
+  
+    <div class="places">
+      <div class="place-card">
+        <img src="india.jpg" alt="Hunza">
+        <p>Hunza</p>
+      </div>
+      <div class="place-card">
+        <img src="italy.jpg" alt="Skardu">
+        <p>Skardu</p>
+      </div>
+      <div class="place-card">
+        <img src="latin america.jpg" alt="Ghizer">
+        <p>Ghizer</p>
+      </div>
+      <div class="place-card">
+        <img src="europe.jpg" alt="Astore">
+        <p>Astore</p>
+      </div>
+      <div class="place-card">
+        <img src="greece.jpg" alt="Nagar">
+        <p>Nagar</p>
+      </div>
+      <div class="place-card">
+        <img src="japan.jpg" alt="Gupis">
+        <p>Gupis</p>
+      </div>
+      <div class="place-card">
+        <img src="usa.jpg" alt="Chilas">
+        <p>Chilas</p>
+      </div>
+      <div class="place-card">
+        <img src="Veitnam.jpg" alt="Raikot">
+        <p>Raikot</p>
+      </div>
+      
+    </div>
+  </section>
+  <section class="gilgit-baltistan">
+    <h2>Punjab</h2>
+    <p class="subtitle">Explore the beauty of the northern areas of Pakistan</p>
+  
+    <div class="places">
+      <div class="place-card">
+        <img src="india.jpg" alt="Hunza">
+        <p>Hunza</p>
+      </div>
+      <div class="place-card">
+        <img src="italy.jpg" alt="Skardu">
+        <p>Skardu</p>
+      </div>
+      <div class="place-card">
+        <img src="latin america.jpg" alt="Ghizer">
+        <p>Ghizer</p>
+      </div>
+      <div class="place-card">
+        <img src="europe.jpg" alt="Astore">
+        <p>Astore</p>
+      </div>
+      <div class="place-card">
+        <img src="greece.jpg" alt="Nagar">
+        <p>Nagar</p>
+      </div>
+      <div class="place-card">
+        <img src="Veitnam.jpg" alt="Gupis">
+        <p>Gupis</p>
+      </div>
+      <div class="place-card">
+        <img src="usa.jpeg" alt="Chilas">
+        <p>Chilas</p>
+      </div>
+      <div class="place-card">
+        <img src="japan.jpg" alt="Raikot">
+        <p>Raikot</p>
+      </div>
+      
+    </div>
+  </section>
+  
+  <section class="gilgit-baltistan">
+    <h2>Sindh</h2>
+    <p class="subtitle">Explore the beauty of the northern areas of Pakistan</p>
+  
+    <div class="places">
+      <div class="place-card">
+        <img src="india.jpg" alt="Hunza">
+        <p>Hunza</p>
+      </div>
+      <div class="place-card">
+        <img src="italy.jpg" alt="Skardu">
+        <p>Skardu</p>
+      </div>
+      <div class="place-card">
+        <img src="latin america.jpg" alt="Ghizer">
+        <p>Ghizer</p>
+      </div>
+      <div class="place-card">
+        <img src="europe.jpg" alt="Astore">
+        <p>Astore</p>
+      </div>
+      <div class="place-card">
+        <img src="greece.jpg" alt="Nagar">
+        <p>Nagar</p>
+      </div>
+      <div class="place-card">
+        <img src="Veitnam.jpg" alt="Gupis">
+        <p>Gupis</p>
+      </div>
+      <div class="place-card">
+        <img src="usa.jpeg" alt="Chilas">
+        <p>Chilas</p>
+      </div>
+      <div class="place-card">
+        <img src="japan.jpg" alt="Raikot">
+        <p>Raikot</p>
+      </div>
+      
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">Coronavirus (COVID-19) FAQs</a></li>
+          <li><a href="#">Manage your trips</a></li>
+          <li><a href="#">Contact Customer Service</a></li>
+          <li><a href="#">Safety resource centre</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h3>Discover</h3>
+        <ul>
+          <li><a href="#">Genius loyalty programme</a></li>
+          <li><a href="#">Seasonal and holiday deals</a></li>
+          <li><a href="#">Travel articles</a></li>
+          <li><a href="#">Booking.com for Business</a></li>
+          <li><a href="#">Traveller Review Awards</a></li>
+          <li><a href="#">Car hire</a></li>
+          <li><a href="#">Flight finder</a></li>
+          <li><a href="#">Restaurant reservations</a></li>
+          <li><a href="#">Booking.com for Travel Agents</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h3>Terms and settings</h3>
+        <ul>
+          <li><a href="#">Privacy & cookies</a></li>
+          <li><a href="#">Terms and conditions</a></li>
+          <li><a href="#">Partner dispute</a></li>
+          <li><a href="#">Modern Slavery Statement</a></li>
+          <li><a href="#">Human Rights Statement</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h3>Partners</h3>
+        <ul>
+          <li><a href="#">Extranet login</a></li>
+          <li><a href="#">Partner help</a></li>
+          <li><a href="#">List your property</a></li>
+          <li><a href="#">Become an affiliate</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h3>About</h3>
+        <ul>
+          <li><a href="#">About Booking.com</a></li>
+          <li><a href="#">How we work</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press centre</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Investor relations</a></li>
+          <li><a href="#">Corporate contact</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <div class="footer-locale">
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="UK Flag">
+        <span>PKR</span>
+      </div>
+      <p class="copyright">
+        Booking.com is part of Booking Holdings Inc., the world leader in online travel and related services. <br>
+        © 1996–2025 Booking.com™. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

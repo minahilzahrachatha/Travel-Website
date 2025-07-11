@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours</title>
+    <style>
+        body, h1, ul, li, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  background-color: #fff;
+  padding: 15px;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav ul li a.active {
+  color: #007BFF;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.tours-hero {
+  background-image: url("europe.jpg");
+  height: 80vh; 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay h1 {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8fafc;
+  margin: 0;
+  padding: 0;
+}
+
+
+.customize-tour {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background-color: #f4f4f4;
+}
+
+.customize-tour p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  color: #333;
+}
+
+.customize-button {
+  background-color: #7c3aed;
+  color: white;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 12px;
+  font-size: 1rem;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.customize-button:hover {
+  background-color: #5b21b6;
+}
+
+
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #111827;
+}
+.upcoming-heading {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.upcoming-tours {
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  background-color: #f8fafc;
+}
+
+
+.tour-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 340px;
+  width: 100%;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tour-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+
+.tour-card:hover {
+  transform: translateY(-5px);
+}
+
+.tour-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.upcoming-tours-info {
+  padding: 20px;
+}
+
+.upcoming-tours-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.partner {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.date, .price {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.date i, .price i {
+  color: #7c3aed;
+  margin-right: 8px;
+}
+.signature-tours {
+  padding: 40px 20px;
+  background-color: #f8fbfa;
+}
+
+.signature-tours h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.signature-tour-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.signature-tour-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.signature-tour-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.signature-tour-card h3 {
+  font-size: 20px;
+  margin: 15px 0 5px;
+}
+
+.signature-tour-card p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.signature-tour-card:hover {
+  transform: translateY(-5px);
+}
+.footer {
+  background-color: lightgrey;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #222;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+}
+
+.footer-column {
+  flex: 1 1 180px;
+  margin: 10px;
+  min-width: 180px;
+}
+
+.footer-column h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #222;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.footer-locale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.footer-locale img {
+  width: 20px;
+  height: 14px;
+}
+
+.footer-locale span {
+  font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="tours.html" class="active">Tours</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+           
+          </ul>
+        </nav>
+      </header>
+      <section class="tours-hero">
+        <div class="overlay">
+          <h1>Tours</h1>
+        </div>
+      </section>
+   
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<section class="customize-tour">
+  <p>You can plan your own tour according to your preferences for a group of like-minded individuals, friends, family, or even as a solo traveler.</p>
+  <a href="#" class="customize-button">Customize a Tour</a>
+</section>
+<div class="upcoming-tours">
+    <h2 class="upcoming-heading">Upcoming Tours with Partners</h2>
+  
+    <div class="tour-cards">
+      <div class="tour-card">
+        <img src="solo travel.jpg" alt="Pakistan Women's Expedition">
+        <div class="upcoming-tours-info">
+          <h3>Pakistan: Women's Expedition</h3>
+          <p class="partner">Partner: Intrepid</p>
+          <p class="date"><i class="fa-regular fa-calendar"></i> Apr 27 – May 8, 2025 (12 days)</p>
+          <p class="price"><i class="fa-solid fa-dollar-sign"></i> USD 3,765 / per person</p>
+        </div>
+      </div>
+  
+      <div class="tour-card">
+        <img src="young adult.jpg" alt="For Women by Women">
+        <div class="upcoming-tours-info">
+          <h3>For Women by Women</h3><br>
+          <p class="partner">Partner: Lost with Purpose</p>
+          <p class="date"><i class="fa-regular fa-calendar"></i> Apr 27 – May 16, 2025 (21 days)</p>
+          <p class="price"><i class="fa-solid fa-dollar-sign"></i> USD 3,000 / per person</p>
+        </div>
+      </div>
+  
+      <div class="tour-card">
+        <img src="private adventures.jpg" alt="Pakistan Expedition">
+        <div class="upcoming-tours-info">
+          <h3>Pakistan Expedition</h3><br>
+          <p class="partner">Partner: Intrepid</p>
+          <p class="date"><i class="fa-regular fa-calendar"></i> May 11 – May 25, 2025 (15 days)</p>
+          <p class="price"><i class="fa-solid fa-dollar-sign"></i> USD 3,760 / per person</p>
+        </div>
+      </div>
+
+        <div class="tour-card">
+          <img src="solo travel.jpg" alt="Pakistan Women's Expedition">
+          <div class="upcoming-tours-info">
+            <h3>Pakistan: Women's Expedition</h3>
+            <p class="partner">Partner: Intrepid</p>
+            <p class="date"><i class="fa-regular fa-calendar"></i> Apr 27 – May 8, 2025 (12 days)</p>
+            <p class="price"><i class="fa-solid fa-dollar-sign"></i> USD 3,765 / per person</p>
+          </div>
+        </div>
+      
+        <div class="tour-card">
+          <img src="seniors.jpg" alt="For Women by Women">
+          <div class="upcoming-tours-info">
+            <h3>For Women by Women</h3>
+            <p class="partner">Partner: Lost with Purpose</p>
+            <p class="date"><i class="fa-regular fa-calendar"></i> Apr 27 – May 16, 2025 (21 days)</p>
+            <p class="price"><i class="fa-solid fa-dollar-sign"></i> USD 3,000 / per person</p>
+          </div>
+        </div>
+      
+        <div class="tour-card">
+          <img src="scotland.jpg" alt="Pakistan Expedition">
+          <div class="upcoming-tours-info">
+            <h3>Pakistan Expedition</h3>
+            <p class="partner">Partner: Intrepid</p>
+            <p class="date"><i class="fa-regular fa-calendar"></i> May 11 – May 25, 2025 (15 days)</p>
+            <p class="price"><i class="fa-solid fa-dollar-sign"></i> USD 3,760 / per person</p>
+          </div>
+        </div>
+      
+        <div class="tour-card">
+          <img src="usa.jpeg" alt="Hunza Valley Adventure">
+          <div class="upcoming-tours-info">
+            <h3>Hunza Valley Adventure</h3>
+            <p class="partner">Partner: Local Tours</p>
+            <p class="date"><i class="fa-regular fa-calendar"></i> Jun 5 – Jun 15, 2025 (11 days)</p>
+            <p class="price"><i class="fa-solid fa-dollar-sign"></i> USD 2,500 / per person</p>
+          </div>
+        </div>
+      
+        <div class="tour-card">
+          <img src="private adventures.jpg" alt="Karakoram Trekking">
+          <div class="upcoming-tours-info">
+            <h3>Karakoram Trekking</h3>
+            <p class="partner">Partner: Adventure Co.</p>
+            <p class="date"><i class="fa-regular fa-calendar"></i> Jul 1 – Jul 20, 2025 (20 days)</p>
+            <p class="price"><i class="fa-solid fa-dollar-sign"></i> USD 4,100 / per person</p>
+          </div>
+        </div>   
+       
+        <div class="tour-card">
+          <img src="family.jpg" alt="Cultural Immersion Tour">
+          <div class="upcoming-tours-info">
+            <h3>Cultural Immersion Tour</h3>
+            <p class="partner">Partner: Global Experiences</p>
+            <p class="date"><i class="fa-regular fa-calendar"></i> Aug 10 – Aug 25, 2025 (16 days)</p>
+            <p class="price"><i class="fa-solid fa-dollar-sign"></i> USD 3,400 / per person</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</section> 
+<section class="signature-tours">
+    <h2>Signature Tours</h2>
+    <div class="signature-tour-cards">
+      
+      <div class="signature-tour-card">
+        <img src="harappa.jpg" alt="Pakistan Tour">
+        <h3>Pakistan Tour</h3>
+        <p>• 30 Days</p>
+      </div>
+  
+      <div class="signature-tour-card">
+        <img src="scotland.jpg" alt="North Pakistan Tour">
+        <h3>North Pakistan Tour</h3>
+        <p>• 20 Days</p>
+      </div>
+  
+      <div class="signature-tour-card">
+        <img src="greece.jpg" alt="Hunza and Skardu Tour">
+        <h3>Hunza and Skardu Tour</h3>
+        <p>• 14 Days</p>
+      </div>
+  
+      <div class="signature-tour-card">
+        <img src="europe.jpg" alt="Hunza Tour">
+        <h3>Hunza Tour</h3>
+        <p>• 9 Days</p>
+      </div>
+  
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">Coronavirus (COVID-19) FAQs</a></li>
+          <li><a href="#">Manage your trips</a></li>
+          <li><a href="#">Contact Customer Service</a></li>
+          <li><a href="#">Safety resource centre</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h3>Discover</h3>
+        <ul>
+          <li><a href="#">Genius loyalty programme</a></li>
+          <li><a href="#">Seasonal and holiday deals</a></li>
+          <li><a href="#">Travel articles</a></li>
+          <li><a href="#">Booking.com for Business</a></li>
+          <li><a href="#">Traveller Review Awards</a></li>
+          <li><a href="#">Car hire</a></li>
+          <li><a href="#">Flight finder</a></li>
+          <li><a href="#">Restaurant reservations</a></li>
+          <li><a href="#">Booking.com for Travel Agents</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h3>Terms and settings</h3>
+        <ul>
+          <li><a href="#">Privacy & cookies</a></li>
+          <li><a href="#">Terms and conditions</a></li>
+          <li><a href="#">Partner dispute</a></li>
+          <li><a href="#">Modern Slavery Statement</a></li>
+          <li><a href="#">Human Rights Statement</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h3>Partners</h3>
+        <ul>
+          <li><a href="#">Extranet login</a></li>
+          <li><a href="#">Partner help</a></li>
+          <li><a href="#">List your property</a></li>
+          <li><a href="#">Become an affiliate</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h3>About</h3>
+        <ul>
+          <li><a href="#">About Booking.com</a></li>
+          <li><a href="#">How we work</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press centre</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Investor relations</a></li>
+          <li><a href="#">Corporate contact</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <div class="footer-locale">
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="UK Flag">
+        <span>PKR</span>
+      </div>
+      <p class="copyright">
+        Booking.com is part of Booking Holdings Inc., the world leader in online travel and related services. <br>
+        © 1996–2025 Booking.com™. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

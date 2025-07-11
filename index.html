@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TourRadar Clone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #fff;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #eee;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #007bb5;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+  
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem;
+    }
+    .search-bar input,
+    .search-bar button {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 1.5rem;
+    }
+    .search-bar button {
+      background-color: #007bb5;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 0 2rem;
+    }
+    .hero {
+  margin: 0 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 400px;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.deals-header h2 {
+  font-size: 2rem;
+  color: #2a2a2a;
+  text-align: left;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+    .deals-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      padding: 2rem;
+      
+    }
+  
+    .deal {
+      flex: 1 1 calc(33.333% - 2rem);
+      height: 240px;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      
+     
+    }
+
+    .deal img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      
+    }
+
+    .deal p {
+      padding: 0.5rem;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .deal {
+        flex: 1 1 calc(50% - 1rem);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .deal {
+        flex: 1 1 100%;
+      }
+    }
+.adventure-section {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #2a2a2a;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.lead {
+  color: #666;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.app-section h2 {
+  color: #2a2a2a;
+  font-size: 2em;
+  margin-bottom: 25px;
+}
+
+.perks-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.perks-list li {
+  padding: 10px 0;
+  margin: 10px 0;
+  font-size: 1.1em;
+  padding-left: 35px;
+  position: relative;
+}
+
+.perks-list li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.checked:before {
+  background: #4CAF50 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path fill="white" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>') center no-repeat;
+  border-color: #4CAF50;
+}
+@media (max-width: 768px) {
+  .container {
+      width: 95%;
+  }
+  
+  h1 {
+      font-size: 2em;
+  }
+ 
+  }
+
+  .spotlight-section {
+  padding: 3rem 1.5rem;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.spotlight-header {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.spotlight-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #2a2a2a;
+}
+
+.spotlight-header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.spotlight-cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.spotlight-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 100%;
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.spotlight-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+
+.card-content a {
+  color: #007bb5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card-content a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 1024px) {
+  .spotlight-card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .spotlight-cards {
+    flex-direction: column;
+  }
+
+  .spotlight-card {
+    flex: 1 1 100%;
+  }
+}
+.featured-adventures {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.featured-adventures h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.adventure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.adventure-card {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.adventure-card h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.adventure-card p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.discount del {
+  color: #555;
+  margin-right: 8px;
+}
+
+.discount-price {
+  color: #d32f2f;
+  font-weight: bold;
+}
+.adventures-everyone {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.adventures-everyone h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.adventure-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.group-card {
+  flex: 1 1 calc(25% - 24px);
+  max-width: calc(25% - 24px);
+  text-align: center;
+  
+}
+
+.group-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.group-card p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 12px;
+}
+.section-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f9fdfc;
+  font-family: Arial, sans-serif;
+}
+
+.section-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.column {
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-size: 0.9rem; 
+  color: #333;
+}
+
+
+.column:first-child {
+  flex: 2; 
+}
+
+
+.column:nth-child(2),
+.column:nth-child(3) {
+  flex: 1;
+}
+
+
+.column:first-child ul {
+  columns: 3; 
+}
+
+.column:nth-child(2) ul,
+.column:nth-child(3) ul {
+  columns: 1;
+}
+
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column li {
+  margin-bottom: 0.8rem;
+}
+
+
+
+.column h3 {
+  font-size: 1.5 rem;
+  margin-bottom: 1rem;
+  color: #2b2b2b;
+}
+
+.recommended-destinations {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.recommended-destinations h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2b2b2b;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.destination {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.overlay p {
+  margin: 0.3rem 0 0;
+  font-size: 0.95rem;
+}
+.footer {
+  background-color: lightgrey;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #222;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+}
+
+.footer-column {
+  flex: 1 1 180px;
+  margin: 10px;
+  min-width: 180px;
+}
+
+.footer-column h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #222;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.footer-locale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.footer-locale img {
+  width: 20px;
+  height: 14px;
+}
+
+.footer-locale span {
+  font-weight: bold;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">TourRadar</div>
+    <nav>
+      <a href="destination.html">Destinations</a>
+      <a href="tours.html" >Tours</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" style="color:#007bb5;font-weight:bold">Get app</a>
+    </nav>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Where to?">
+    <input type="text" placeholder="When?">
+    <input type="text" placeholder="All Adventures">
+    <button>Search</button>
+  </div>
+
+  <section class="hero">
+    <img src="hero img.png" alt="Hero img">
+  </section>
+  <br><br><br><br><br>
+<section>
+  <div class="deals-header">
+<h2>Deals Section </h2>
+  </div>
+  <div class="deals-section">
+    <div class="deal">
+      <img src="usa.jpeg" alt="USA Deals">
+      <p>USA Deals</p>
+    </div>
+    <div class="deal">
+      <img src="Egypt.jpg" alt="Egypt Deals">
+      <p>Egypt Deals</p>
+    </div>
+    <div class="deal">
+      <img src="Veitnam.jpg" alt="Vietnam Deals">
+      <p>Vietnam Deals</p>
+    </div>
+    <div class="deal">
+      <img src="india.jpg" alt="India Deals">
+      <p>India Deals</p>
+    </div>
+    <div class="deal">
+      <img src="japan.jpg" alt="Japan Deals">
+      <p>Japan Deals</p>
+    </div>
+    <div class="deal">
+      <img src="italy.jpg" alt="Italy Deals">
+      <p> Italy Deals</p>
+    </div>
+    </div>
+  </section>
+    <section class="adventure-section">
+      <div class="container">
+          <h1>Adventure Simplified</h1>
+          <p class="lead">TourRadar makes exploring and booking organised adventures effortless. Whether through our mobile app or website, we streamline your booking experience, so you can focus on what truly matters: your next great adventure.</p>
+    
+          <div class="app-section">
+              <h2>Adventure at Your Fingertips</h2>
+              <p>The TourRadar mobile app puts adventure in your pocket. Explore thousands of trips, receive real-time updates, and manage bookings effortlessly. Your next adventure is just a tap away.</p>
+    
+              <ul class="perks-list">
+                  <li class="unchecked">Book 50,000+ multi-day tours, safaris, river cruises, and more</li>
+                  <li class="checked">Win up to $3,000 every month in app-only giveaways</li>
+                  <li class="unchecked">Save up to 50% with app-exclusive deals</li>
+              </ul>
+          </div>
+      </div>
+    </section>
+    <section class="spotlight-section">
+      <div class="spotlight-header">
+        <h2>TourRadar Spotlight</h2>
+        <p>Find out what’s happening at TourRadar - from the latest travel news to our special offers.</p>
+      </div>
+      <div class="spotlight-cards">
+        <div class="spotlight-card">
+          <img src="mega sale.jpg" alt="Mega Sale">
+          <div class="card-content">
+            <h3>Mega Sale</h3>
+            <p>Book now and save up to 70% on organized tours in top destinations worldwide. From cultural trips in Japan to city explorations in Italy, we’ve got them all!</p>
+            <br><br>
+            <a href="#">View Deals</a>
+          </div>
+        </div>
+        <div class="spotlight-card">
+          <img src="solo travel.jpg" alt="Solo Travelers">
+          <div class="card-content">
+            <h3>Empowering Solo Travelers</h3>
+            <p>Organised adventures are inherently social, bringing explorers together to share safe, enriching, and unforgettable journeys. With curated itineraries and opportunities to connect with travelers, the operators we partner with make solo tours memorable.</p>
+            <a href="#">Find Your Solo Trip</a>
+          </div>
+        </div>
+        <div class="spotlight-card">
+          <img src="private adventures.jpg" alt="Private Adventures">
+          <div class="card-content">
+            <h3>Private Adventures</h3>
+            <p>Ready-to-book adventures, personalized.</p>
+            <br><br><br><br><br>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="featured-adventures">
+      <h2>Featured Adventures</h2>
+      <div class="adventure-grid">
+        <div class="adventure-card">
+          <h3>Tailor-Made Private Zimbabwe Vi...</h3>
+          <p>5 days from <strong>$2,299</strong></p>
+        </div>
+        <div class="adventure-card">
+          <h3>Tailor-Made Best Panama Tour w...</h3>
+          <p>7 days from <strong>$3,889</strong></p>
+        </div>
+        <div class="adventure-card discount">
+          <h3>Treasures of Andalucia</h3>
+          <p>8 days from <del>$1,623</del> <span class="discount-price">$1,523</span></p>
+        </div>
+        <div class="adventure-card">
+          <h3>Epic Indonesia 19 Days</h3>
+          <p>19 days from <strong>$2,449</strong></p>
+        </div>
+        <div class="adventure-card">
+          <h3>From Arusha: 3 Days Safari Magi...</h3>
+          <p>3 days from <strong>$799</strong></p>
+        </div>
+        <div class="adventure-card discount">
+          <h3>Enchanting Kashmir Tour</h3>
+          <p>7 days from <del>$3,000</del> <span class="discount-price">$1,500</span></p>
+        </div>
+        <div class="adventure-card">
+          <h3>CHRISTMAS MARKETS OF HAB...</h3>
+          <p>8 days from <strong>$2,199</strong></p>
+        </div>
+        <div class="adventure-card">
+          <h3>Toscana Leisurely with a Detour ...</h3>
+          <p>7 days from <strong>$1,694</strong></p>
+        </div>
+      </div>
+    </section>
+    <section class="adventures-everyone">
+      <h2>Adventures For Everyone</h2>
+      <div class="adventure-groups">
+        <div class="group-card">
+          <img src="family.jpg" alt="Families">
+          <p>Families</p>
+        </div>
+        <div class="group-card">
+          <img src="couple travel.jpg" alt="Couples">
+          <p>Couples</p>
+        </div>
+        <div class="group-card">
+          <img src="seniors.jpg" alt="Seniors">
+          <p>Seniors</p>
+        </div>
+        <div class="group-card">
+          <img src="young adult.jpg" alt="Young Adults">
+          <p>Young Adults</p>
+        </div>
+      </div>
+    </section>
+    <section>
+    <div class="section-container">
+      <div class="column">
+        <h3>Top Destinations</h3>
+        <ul>
+          <li>Africa</li>
+          <li>Asia</li>
+          <li>Australia</li>
+          <li>Europe</li>
+          <li>Latin America</li>
+          <li>South America</li>
+          <li>Egypt</li>
+          <li>Morocco</li>
+          <li>South Africa</li>
+          <li>Bali</li>
+          <li>China</li>
+          <li>India</li>
+          <li>Japan</li>
+          <li>New Zealand</li>
+          <li>Philippines</li>
+          <li>Sri Lanka</li>
+          <li>Thailand</li>
+          <li>Vietnam</li>
+          <li>Croatia</li>
+          <li>Danube River Cruises</li>
+          <li>Eastern Europe</li>
+          <li>Great Britain & UK</li>
+          <li>Greece</li>
+          <li>Greek Islands</li>
+          <li>Iceland</li>
+          <li>Ireland</li>
+          <li>Italy</li>
+          <li>Scandinavia</li>
+          <li>Portugal</li>
+          <li>Rhine River Cruises</li>
+          <li>Scotland</li>
+          <li>Spain</li>
+          <li>Turkey</li>
+          <li>Canada</li>
+          <li>Costa Rica</li>
+          <li>USA</li>
+        </ul>
+      </div>
+    
+      <div class="column">
+        <h3>Top Operators</h3>
+        <ul>
+          <li>Contiki</li>
+          <li>Cosmos</li>
+          <li>G Adventures</li>
+          <li>Intrepid</li>
+          <li>Topdeck</li>
+          <li>Trafalgar</li>
+        </ul>
+      </div>
+    
+      <div class="column">
+        <h3>Top Adventure Styles</h3>
+        <ul>
+          <li>Adventure</li>
+          <li>Bicycle</li>
+          <li>Hiking & Trekking</li>
+          <li>Northern Lights</li>
+          <li>River Cruise</li>
+          <li>Africa Safari</li>
+          <li>In-Depth Cultural</li>
+          <li>Coach / Bus</li>
+          <li>Train / Rail</li>
+          <li>Beach</li>
+          <li>Family</li>
+          <li>Private</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="recommended-destinations">
+    <h2>Recommended Destinations</h2>
+    <div class="grid">
+      <div class="destination" style="background-image: url('scotland.jpg');">
+        <div class="overlay">
+          <h3>Scotland</h3>
+          <p>232 tours</p>
+        </div>
+      </div>
+      <div class="destination" style="background-image: url('italy.jpg');">
+        <div class="overlay">
+          <h3>Italy</h3>
+          <p>1,275 tours</p>
+        </div>
+      </div>
+      <div class="destination" style="background-image: url('egypt.jpg');">
+        <div class="overlay">
+          <h3>Egypt</h3>
+          <p>1,561 tours</p>
+        </div>
+      </div>
+      <div class="destination" style="background-image: url('usa.jpg');">
+        <div class="overlay">
+          <h3>USA</h3>
+          <p>1,006 tours</p>
+        </div>
+      </div>
+      <div class="destination" style="background-image: url('greece.jpg');">
+        <div class="overlay">
+          <h3>Greece</h3>
+          <p>963 tours</p>
+        </div>
+      </div>
+      <div class="destination" style="background-image: url('japan.jpg');">
+        <div class="overlay">
+          <h3>Japan</h3>
+          <p>540 tours</p>
+        </div>
+      </div>
+      <div class="destination" style="background-image: url('europe.jpg');">
+        <div class="overlay">
+          <h3>Europe</h3>
+          <p>11,429 tours</p>
+        </div>
+      </div>
+      <div class="destination" style="background-image: url('asia.jpg');">
+        <div class="overlay">
+          <h3>Asia</h3>
+          <p>15,041 tours</p>
+        </div>
+      </div>
+      <div class="destination" style="background-image: url('latin\ america.jpg');">
+        <div class="overlay">
+          <h3>Latin America</h3>
+          <p>3,838 tours</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">Coronavirus (COVID-19) FAQs</a></li>
+          <li><a href="#">Manage your trips</a></li>
+          <li><a href="#">Contact Customer Service</a></li>
+          <li><a href="#">Safety resource centre</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h3>Discover</h3>
+        <ul>
+          <li><a href="#">Genius loyalty programme</a></li>
+          <li><a href="#">Seasonal and holiday deals</a></li>
+          <li><a href="#">Travel articles</a></li>
+          <li><a href="#">Booking.com for Business</a></li>
+          <li><a href="#">Traveller Review Awards</a></li>
+          <li><a href="#">Car hire</a></li>
+          <li><a href="#">Flight finder</a></li>
+          <li><a href="#">Restaurant reservations</a></li>
+          <li><a href="#">Booking.com for Travel Agents</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h3>Terms and settings</h3>
+        <ul>
+          <li><a href="#">Privacy & cookies</a></li>
+          <li><a href="#">Terms and conditions</a></li>
+          <li><a href="#">Partner dispute</a></li>
+          <li><a href="#">Modern Slavery Statement</a></li>
+          <li><a href="#">Human Rights Statement</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h3>Partners</h3>
+        <ul>
+          <li><a href="#">Extranet login</a></li>
+          <li><a href="#">Partner help</a></li>
+          <li><a href="#">List your property</a></li>
+          <li><a href="#">Become an affiliate</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h3>About</h3>
+        <ul>
+          <li><a href="#">About Booking.com</a></li>
+          <li><a href="#">How we work</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press centre</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Investor relations</a></li>
+          <li><a href="#">Corporate contact</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <div class="footer-locale">
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="UK Flag">
+        <span>PKR</span>
+      </div>
+      <p class="copyright">
+        Booking.com is part of Booking Holdings Inc., the world leader in online travel and related services. <br>
+        © 1996–2025 Booking.com™. All rights reserved.
+      </p>
+    </div>
+  </footer>
+  
+    </body>
+  </html>

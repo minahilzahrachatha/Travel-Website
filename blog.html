@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog </title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body, h1, ul, li, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  background-color: #fff;
+  padding: 15px;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav ul li a.active {
+  color: #007BFF;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.blog-hero {
+  background-image: url("scotland.jpg");
+  height: 80vh; 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay h1 {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
+.card-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px 40px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  min-height: 450px;
+  
+}
+
+.card-image {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #38c172;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.card a {
+  margin-top: auto;
+  color: #7e57c2;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+  .card-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-section {
+    grid-template-columns: 1fr;
+  }
+}
+.footer {
+  background-color: lightgray;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #222;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+}
+
+.footer-column {
+  flex: 1 1 180px;
+  margin: 10px;
+  min-width: 180px;
+}
+
+.footer-column h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #222;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.footer-locale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.footer-locale img {
+  width: 20px;
+  height: 14px;
+}
+
+.footer-locale span {
+  font-weight: bold;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="tours.html" >Tours</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+       
+      </ul>
+    </nav>
+  </header>
+  <section class="blog-hero">
+    <div class="overlay">
+      <h1>Blog</h1>
+    </div>
+  </section>
+  <section class="card-section">
+    <div class="card">
+      <h3>Exploring Pakistan’s Hidden Gems: The Sikh Legacy in Pakistan</h3>
+      <p>Pakistan – a country of rich heritage with threads from many faiths woven through its cultural fabric. It has been home to a significant Sikh</p>
+      <a href="#">Read More »</a>
+    </div>
+    
+  
+    <div class="card">
+      <div class="card-image" style="background-image: url('Egypt.jpg');">
+        <span class="badge green">INDUS VALLEY CIVILISATION</span>
+      </div>
+      <h3>The Roots of Indus Valley Civilization in Pakistan</h3>
+      <p>Representing the earliest manifestation of urban development, the Indus Valley civilization stands to be one of the crown jewels of historical heritage.</p>
+      <a href="readMore.html">Read More »</a>
+    </div>
+  
+    <div class="card">
+      <div class="card-image" style="background-image: url('greece.jpg');">
+        <span class="badge green">PAKISTAN TOURIST VISA</span>
+      </div>
+      <h3>Obtaining a Tourist Visa for Pakistan</h3>
+      <p>So you’ve decided to visit Pakistan and with that decision comes the painstaking process of qualifying and applying for a visa.</p>
+      <a href="#">Read More »</a>
+    </div>
+  
+    <div class="card">
+      <div class="card-image" style="background-image: url('family.jpg');">
+        <span class="badge green">WOMEN TRAVEL SAFETY</span>
+      </div>
+      <h3>Is Pakistan Safe to Travel as a Woman?</h3>
+      <p>Pakistan is among the top adventure destinations in the world, especially for travelers seeking mountainscapes and hospitality.</p>
+      <a href="#">Read More »</a>
+    </div>
+  
+  
+    <div class="card">
+      <div class="card-image" style="background-image: url('scotland.jpg');">
+        <span class="badge green">SIKH LEGACY</span>
+      </div>
+      <h3>Exploring Sikh Heritage Sites in Pakistan</h3>
+      <p>Explore the religious diversity and ancient architecture of Pakistan's Sikh heritage sites.</p>
+      <a href="#">Read More »</a>
+    </div>
+  
+    <div class="card">
+      <div class="card-image" style="background-image: url('Egypt.jpg');">
+        <span class="badge green">INDUS VALLEY</span>
+      </div>
+      <h3>Secrets of the Indus Valley Civilization</h3>
+      <p>Discover the ancient ruins and the early culture that shaped the Indian subcontinent thousands of years ago.</p>
+      <a href="#">Read More »</a>
+    </div>
+  
+    <div class="card">
+      <div class="card-image" style="background-image: url('greece.jpg');">
+        <span class="badge green">TOURIST VISA GUIDE</span>
+      </div>
+      <h3>How to Apply for a Pakistan Tourist Visa</h3>
+      <p>A step-by-step guide to obtaining your Pakistani visa easily and efficiently.</p>
+      <a href="#">Read More »</a>
+    </div>
+  
+    <div class="card">
+      <div class="card-image" style="background-image: url('family.jpg');">
+        <span class="badge green">SOLO FEMALE TRAVEL</span>
+      </div>
+      <h3>Traveling Solo as a Woman in Pakistan</h3>
+      <p>Tips and advice for women looking to safely and confidently explore Pakistan alone.</p>
+      <a href="#">Read More »</a>
+    </div>
+  
+   
+    <div class="card">
+      <div class="card-image" style="background-image: url('scotland.jpg');">
+        <span class="badge green">HERITAGE SITES</span>
+      </div>
+      <h3>Must-Visit Historical Sites in Pakistan</h3>
+      <p>From Lahore Fort to Mohenjo-Daro, Pakistan offers a wealth of history to discover.</p>
+      <a href="#">Read More »</a>
+    </div>
+  
+    <div class="card">
+      <div class="card-image" style="background-image: url('Egypt.jpg');">
+        <span class="badge green">ANCIENT CIVILISATIONS</span>
+      </div>
+      <h3>Exploring Ancient Pakistan</h3>
+      <p>Journey back in time to the earliest known civilizations that flourished in modern-day Pakistan.</p>
+      <a href="#">Read More »</a>
+    </div>
+  
+    <div class="card">
+      <div class="card-image" style="background-image: url('greece.jpg');">
+        <span class="badge green">VISA TIPS</span>
+      </div>
+      <h3>Essential Tips for Pakistan Visa Approval</h3>
+      <p>Common mistakes to avoid and tips for a smooth Pakistan visa application process.</p>
+      <a href="#">Read More »</a>
+    </div>
+  
+    <div class="card">
+      <div class="card-image" style="background-image: url('family.jpg');">
+        <span class="badge green">TRAVEL TIPS FOR WOMEN</span>
+      </div>
+      <h3>Women's Travel Safety Guide for Pakistan</h3>
+      <p>Practical advice for female travelers exploring the landscapes and cultures of Pakistan safely.</p>
+      <a href="#">Read More »</a>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">Coronavirus (COVID-19) FAQs</a></li>
+          <li><a href="#">Manage your trips</a></li>
+          <li><a href="#">Contact Customer Service</a></li>
+          <li><a href="#">Safety resource centre</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h3>Discover</h3>
+        <ul>
+          <li><a href="#">Genius loyalty programme</a></li>
+          <li><a href="#">Seasonal and holiday deals</a></li>
+          <li><a href="#">Travel articles</a></li>
+          <li><a href="#">Booking.com for Business</a></li>
+          <li><a href="#">Traveller Review Awards</a></li>
+          <li><a href="#">Car hire</a></li>
+          <li><a href="#">Flight finder</a></li>
+          <li><a href="#">Restaurant reservations</a></li>
+          <li><a href="#">Booking.com for Travel Agents</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h3>Terms and settings</h3>
+        <ul>
+          <li><a href="#">Privacy & cookies</a></li>
+          <li><a href="#">Terms and conditions</a></li>
+          <li><a href="#">Partner dispute</a></li>
+          <li><a href="#">Modern Slavery Statement</a></li>
+          <li><a href="#">Human Rights Statement</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h3>Partners</h3>
+        <ul>
+          <li><a href="#">Extranet login</a></li>
+          <li><a href="#">Partner help</a></li>
+          <li><a href="#">List your property</a></li>
+          <li><a href="#">Become an affiliate</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h3>About</h3>
+        <ul>
+          <li><a href="#">About Booking.com</a></li>
+          <li><a href="#">How we work</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press centre</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Investor relations</a></li>
+          <li><a href="#">Corporate contact</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <div class="footer-locale">
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="UK Flag">
+        <span>PKR</span>
+      </div>
+      <p class="copyright">
+        Booking.com is part of Booking Holdings Inc., the world leader in online travel and related services. <br>
+        © 1996–2025 Booking.com™. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
